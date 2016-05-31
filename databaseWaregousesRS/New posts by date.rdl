@@ -73,7 +73,7 @@ GROUP BY Time.Day</CommandText>
       <Query>
         <DataSourceName>DataSource1</DataSourceName>
         <CommandText>SELECT        COUNT(Time.DayOfWeek) AS PostsCount, 
-                         CASE Time.DayOfWeek WHEN 0 THEN 'MONDAY' WHEN 1 THEN 'TUESDAY' WHEN 2 THEN 'WEDNESDAY' WHEN 3 THEN 'THURSDAY' WHEN 4 THEN 'FRIDAY' WHEN 5 THEN 'SATURDAY' WHEN 6 THEN 'SUNDAY'
+                         CASE Time.DayOfWeek WHEN 0 THEN 'SUNDAY' WHEN 1 THEN 'MONDAY' WHEN 2 THEN 'TUESDAY' WHEN 3 THEN 'WEDNESDAY' WHEN 4 THEN 'THURSDAY' WHEN 5 THEN 'FRIDAY' WHEN 6 THEN 'SATURDAY'
                           END AS DayOfTheWeek
 FROM            DimPost INNER JOIN
                          Time ON DimPost.CreationTimeId = Time.Id
@@ -362,7 +362,6 @@ ORDER BY Time.DayOfWeek</CommandText>
             </ChartNoDataMessage>
             <DataSetName>NewPostsYears</DataSetName>
             <Top>3.20146cm</Top>
-            <Left>0cm</Left>
             <Height>6.00224cm</Height>
             <Width>16.51cm</Width>
             <Style>
@@ -1207,7 +1206,7 @@ ORDER BY Time.DayOfWeek</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Users activity by location</Value>
+                    <Value>Users activity by date</Value>
                     <Style>
                       <FontSize>24pt</FontSize>
                     </Style>
